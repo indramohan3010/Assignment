@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<center>
+<body style=" background-color: aqua;" >
+ <h1 style="color: red;">Simple Interest Calculator</h1>
+ 
+ <h1 th:text=${SucessMsg}></h1>
+ 
+ <h2 th:text=${errmsg}></h2>
+ 
+ 
+ <form th:action="@{/Add}" method="post" th:object=${fynarfinentity}>
+   
+   <table>
+     <tr>
+        <th>PrincipleAmount</th>
+        <td><input type="text" name="outstandingPrinciple" placeholder="Enter outstandingPrinciple Amount" ></td>
+     </tr>
+     
+     <tr>
+        <th>RatePercentage</th>
+        <td><input type="text" name="rate"  ></td>
+     </tr>
+     
+     <tr>
+        <th>NumberOfDays</th>
+        <td><input type="text" name="numberOfDays"  ></td>
+     </tr>
+     
+     <tr>
+        <th>Payment</th>
+        <td><input type="text" name="payment"  ></td>
+     </tr>
+     
+     <tr>
+       <td><input type="reset" value="RESET"  ></td>
+        <td><input type="submit" value="Enter"  ></td>
+     </tr>
+   </table>
+     
+    <a th:href="@{/view}"><b>Get All Record</b></a>
+ </form>
+   
+    
+</body>
+</center>
+</html>

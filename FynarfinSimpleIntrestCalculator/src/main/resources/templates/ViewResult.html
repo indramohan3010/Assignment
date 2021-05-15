@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="background-color: cyan">
+    <center><h1>View Result</h1></center>
+    <a th:href="@{/form}"><b>Add Value</b></a><br>
+    <table border="2">
+       <thead>
+       <tr style="color: blue">
+          <th>sno</th>
+          <th>outstandingPrinciple</th>
+          <th>rate</th>
+          <th>numberOfDays</th>
+          <th>date</th>
+          <th>calculatedInterest</th>
+          <th>outstandingInterest</th>
+          <th>totalBalance</th>
+          <th>payment</th>
+          <th>outstandingInterestAfterPayment</th>
+          <th>outstandingprincipleAfterPayment</th>
+          <th>totalOutstandingAferPayment</th>
+       </tr>
+       </thead>
+       <tbody>
+         
+            <tr th:each="var: ${result}">
+             <td th:text=${var.sno}></td>
+             <td th:text=${var.outstandingPrinciple}></td>
+             <td th:text=${var.rate}></td>
+             <td th:text=${var.numberOfDays}></td>
+             <td th:text=${var.date}></td>
+             <td th:text=${var.calculatedInterest}></td>
+             <td th:text=${var.outstandingInterest}></td>
+             <td th:text=${var.totalBalance}></td>
+             <td th:text=${var.payment}></td>
+             <td th:text=${var.outstandingInterestAfterPayment}></td>
+             <td th:text=${var.outstandingprincipleAfterPayment}></td>
+             <td th:text=${var.totalOutstandingAferPayment}></td>
+         </tr>
+       </tbody>
+    </table>
+</body>
+</html>
